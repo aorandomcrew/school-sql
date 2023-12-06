@@ -1,8 +1,9 @@
 package ru.hogwarts.school.model;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
-
 
 
 @Entity
@@ -20,7 +21,7 @@ public class Faculty {
     List<Student> student;
 
 
-    public Faculty(){
+    public Faculty() {
 
     }
 

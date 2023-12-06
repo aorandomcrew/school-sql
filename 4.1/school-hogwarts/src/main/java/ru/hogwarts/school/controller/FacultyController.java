@@ -17,7 +17,7 @@ public class FacultyController {
     }
 
     @GetMapping("/filtered")
-    public Collection<Faculty> geByColor(@RequestParam("color") String color){
+    public Collection<Faculty> geByColor(@RequestParam("color") String color) {
         return facultyService.getByColor(color);
     }
 
@@ -42,11 +42,12 @@ public class FacultyController {
     }
 
     @GetMapping("/by_color_or_name")
-    public Collection<Faculty> getByColorOrName(@RequestParam("color") String color, @RequestParam("name") String name){
+    public Collection<Faculty> getByColorOrName(@RequestParam("color") String color, @RequestParam("name") String name) {
         return facultyService.getByColorOrNameIgnoreCase(color, name);
     }
+
     @GetMapping("/by-student")
-    public Faculty findByStudent(@RequestParam() Long id){
+    public Faculty findByStudent(@RequestParam() Long id) {
         return facultyService.findByStudentId(id);
     }
 }
